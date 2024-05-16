@@ -1,7 +1,0 @@
-- hosts: localhost
-  tasks:
-    - name: Replace "Welcome to nginx!" with your name
-      replace:
-        path: /usr/share/nginx/html/index.html
-        regexp: 'Welcome to nginx!'
-        replace: 'Juan Carlos Gamez Enriquez</br> AL03022079'
