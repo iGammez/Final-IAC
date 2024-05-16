@@ -57,7 +57,11 @@ Navegar al directorio playbooks y ejecutar el playbook:
 
 
 cd playbooks
+
 ansible-playbook -i hosts main.yml
+
 Notas
+
 Asegurarse de que las credenciales de AWS estén configuradas correctamente antes de ejecutar los comandos de Terraform.
+
 Los playbooks de Ansible asumen acceso SSH a las instancias provisionadas
