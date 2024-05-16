@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Welcome to NGINX</title>
-</head>
-<body>
-  <h1>Welcome to NGINX</h1>
-</body>
-</html>
+- name: Update NGINX index.html
+  hosts: nginx
+  tasks:
+    - name: Replace content in index.html
+      lineinfile:
+        path: /usr/share/nginx/html/index.html
+        regexp: 'Welcome to nginx!'
+        line: 'Welcome to NGINX, [Juan] [03022079]'
