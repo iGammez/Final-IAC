@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: Copiar archivo index.html
+      copy:
+        src: ./index.html
+        dest: /var/www/html/
+        mode: 0644
+    - name: Modificar contenido del archivo index.html
+      lineinfile:
+        path: /var/www/html/index.html
+        line: "<h1>Tu Nombre y Matrícula</h1>"
+        regexp: "Welcome to NGINX"
+        create: yes
